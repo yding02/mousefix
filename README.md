@@ -4,7 +4,7 @@ Visual Studio 2015 may be required to compile this program.
 -------------------------------------------------------------------------------
 Credits 
 -------------------------------------------------------------------------------
-Daniel Jackson for original source code <http://www.danieljackson.co.uk/> \n
+Daniel Jackson for original source code <http://www.danieljackson.co.uk/>______
 Yifeng Ding for fixing the highlighting issue <https://github.com/yding02>
 
 -------------------------------------------------------------------------------
