@@ -15,8 +15,8 @@ static DWORD lastTime = 0;
 #pragma data_seg()
 
 
-#define THRESHOLD 45
-#define UPTHRESHOLD 100
+#define THRESHOLD 50
+#define UPTHRESHOLD 30
 
 BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
   switch (ul_reason_for_call) {
@@ -49,7 +49,7 @@ LRESULT CALLBACK LowLevelMouseProc(int nCode, WPARAM wParam, LPARAM lParam) {
         //char buffer[1024]; sprintf(buffer, "Left button down @ %d, was %d = %d", (int)currentTime, (int)lastTime, (int)elapsedTime); MessageBox(NULL, buffer, "MouseFixDll", MB_OK);
         block = true;
       } else {
-        //lastTime = currentTime;
+			lastTime = currentTime;
       }
     } else if (wParam == WM_LBUTTONUP) {
 		if (elapsedTime < UPTHRESHOLD) {
